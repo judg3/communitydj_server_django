@@ -1,0 +1,6 @@
+default['python_server']['user'] = 'python_server'
+default['python_server']['group'] = 'python_server'
+default['python_server']['name'] = 'python_server'
+default['python_server']['config'] = 'python_server.conf'
+default['python_server']['document_root'] = '/the_app'
+default['python']['version'] = '3.3'
