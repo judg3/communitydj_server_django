@@ -1,4 +1,4 @@
-# python_server cookbook
+# CommunityDj django server
 
 # Requirements
 
@@ -14,8 +14,8 @@
 vagrant up
 
 # Info
-* Static pages: www.communitydj.local
-* Django api: www.api.django.local
+* Static pages: www.communitydj.local (src:`data/static`)
+* Django api: www.api.django.local (src:`data/server/service`)
 
 # Author
 
