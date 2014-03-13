@@ -18,5 +18,19 @@ include_recipe 'git'
 include_recipe 'nginx'
 include_recipe 'python'
 
+#checkout dal
+git "#{node['dal']['app_path']}" do
+  repository "#{node['dal']['repository']}"
+  reference "master"
+  action :sync
+end
+
+#checkout frontend
+git "#{node['frontend']['app_path']}" do
+  repository "#{node['frontend']['repository']}"
+  reference "master"
+  action :sync
+end
+
 include_recipe 'python_server::nginx' 
 include_recipe 'python_server::python'

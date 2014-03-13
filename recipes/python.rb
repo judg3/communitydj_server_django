@@ -22,8 +22,16 @@ package "django" do
   provider Chef::Provider::PythonPip
 end
 
-cookbook_file "/bin/gunicorn_start.bash" do
+cookbook_file "/the_app/server/bin/gunicorn_start.bash" do
   source "gunicorn_start.bash"
+  mode 0777
+  owner "vagrant"
+  group "vagrant"
+  action :create
+end
+
+cookbook_file "/etc/init.d/communitydj.bash" do
+  source "communitydj.bash"
   mode 0777
   owner "vagrant"
   group "vagrant"
